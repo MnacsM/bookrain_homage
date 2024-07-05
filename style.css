@@ -3,8 +3,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    background-color: #000;
-    font-family: 'Yusei Magic', sans-serif;
+    background-color: #1a1a1a; /* 黒に近い濃い灰色 */
 }
 
 #rain-container {
@@ -15,7 +14,11 @@ body, html {
 
 .raindrop {
     position: absolute;
-    color: #fff;
+    color: #e6e6e6; /* 白に近い薄い灰色 */
     white-space: nowrap; /* 改行を防止 */
     overflow: visible; /* はみ出しを許可 */
+}
+
+body {
+    font-family: 'Yusei Magic', sans-serif;
 }
