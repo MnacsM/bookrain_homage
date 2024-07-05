@@ -13,18 +13,18 @@ function createRaindrop() {
     raindrop.style.left = `${Math.random() * 110 - 10}%`;
     raindrop.style.top = '-20px';
 
-    // フォントサイズをランダムに設定（12pxから24pxの範囲）
-    const fontSize = Math.floor(Math.random() * (24 - 12 + 1)) + 12;
+    // フォントサイズをランダムに設定（10pxから40pxの範囲）
+    const fontSize = Math.floor(Math.random() * (40 - 10 + 1)) + 10;
     raindrop.style.fontSize = `${fontSize}px`;
 
     raindrop.textContent = words[Math.floor(Math.random() * words.length)];
     document.getElementById('rain-container').appendChild(raindrop);
 
     let position = -20;
-    // ベースの落下速度をランダムに設定（1から3の範囲）
-    let baseSpeed = Math.random() * 2 + 1;
+    // ベースの落下速度をランダムに設定（1から10の範囲）
+    let baseSpeed = Math.random() * 9 + 1;
     // フォントサイズに応じて速度を調整（大きいほど遅く）
-    let speed = baseSpeed * (20 / fontSize);
+    let speed = baseSpeed * (25 / fontSize);
     
     const interval = setInterval(() => {
         position += speed;
