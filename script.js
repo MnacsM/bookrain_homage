@@ -9,8 +9,15 @@ async function loadWords() {
 function createRaindrop() {
     const raindrop = document.createElement('div');
     raindrop.classList.add('raindrop');
-    raindrop.style.left = `${Math.random() * 100}%`;
+    // 左端のはみ出しを許可するため、-10%から100%の範囲で設定
+    raindrop.style.left = `${Math.random() * 110 - 10}%`;
     raindrop.style.top = '-20px';
+    // フォントサイズをランダムに設定（12pxから24pxの範囲）
+    const fontSize = Math.floor(Math.random() * (24 - 12 + 1)) + 12;
+    raindrop.style.fontSize = `${fontSize}px`;
+    raindrop.textContent = words[Math.floor(Math.random() * words.length)];
+    document.getElementById('rain-container').appendChild(raindrop);
+
     raindrop.textContent = words[Math.floor(Math.random() * words.length)];
     document.getElementById('rain-container').appendChild(raindrop);
 

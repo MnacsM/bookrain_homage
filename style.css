@@ -4,6 +4,7 @@ body, html {
     height: 100%;
     overflow: hidden;
     background-color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 #rain-container {
@@ -18,4 +19,6 @@ body, html {
     font-family: Arial, sans-serif;
     font-size: 14px;
     user-select: none;
+    white-space: nowrap; /* 改行を防止 */
+    overflow: visible; /* はみ出しを許可 */
 }
