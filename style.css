@@ -16,9 +16,6 @@ body, html {
 .raindrop {
     position: absolute;
     color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    user-select: none;
     white-space: nowrap; /* 改行を防止 */
     overflow: visible; /* はみ出しを許可 */
 }
