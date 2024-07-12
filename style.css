@@ -12,13 +12,21 @@ body, html {
     height: 100%;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .raindrop {
     position: absolute;
     color: #e6e6e6; /* 白に近い薄い灰色 */
     white-space: nowrap; /* 改行を防止 */
     overflow: visible; /* はみ出しを許可 */
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    animation: fadeIn 1s ease-out;
 }
 
 body {
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
